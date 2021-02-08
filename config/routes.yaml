@@ -1,0 +1,21 @@
+
+api_add_user:
+  path: /users/add
+  controller: App\Controller\RESTController::addUser
+  methods: post
+
+api_list_users:
+  path: /users/list
+  controller: App\Controller\RESTController::listUsers
+  methods: get
+
+form_add_user:
+  path: /users/form
+  controller: App\Controller\RegistrationFormController::new
+  methods: get|post
+
+form_add_user_succeeded:
+  path: /users/success
+  controller: App\Controller\RegistrationFormController::newUserSuccess
+  methods: get
+
