@@ -61,7 +61,6 @@ class DoctrineUserRepository implements UserRepository
      */
     public function remove(User $user): bool
     {
-        // not implemented
         return false;
     }
 
