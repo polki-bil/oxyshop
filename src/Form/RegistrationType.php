@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Form\Type;
+namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -15,7 +16,7 @@ class RegistrationType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('email', TextType::class)
+            ->add('email', EmailType::class)
             ->add('password', PasswordType::class)
             ->add('role', ChoiceType::class, ['choices'  => [
                 'ADMIN' => 'ADMIN',

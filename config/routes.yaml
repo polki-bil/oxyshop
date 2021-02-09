@@ -10,7 +10,7 @@ api_list_users:
   methods: get
 
 form_add_user:
-  path: /users/form
+  path: /
   controller: App\Controller\RegistrationFormController::new
   methods: get|post
 

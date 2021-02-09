@@ -4,7 +4,9 @@
 namespace App\Entity;
 
 
-class UserFormEntity
+use JsonSerializable;
+
+class UserFormEntity implements JsonSerializable
 {
     protected $name;
     protected $password;
@@ -73,5 +75,18 @@ class UserFormEntity
     public function setRole($role): void
     {
         $this->role = $role;
+    }
+
+    /**
+     * @return array
+     */
+    public function jsonSerialize(): array
+    {
+        return [
+            'name' => $this->getName(),
+            'password' => $this->getPassword(),
+            'email' => $this->getEmail(),
+            'role' => $this->getRole()
+        ];
     }
 }

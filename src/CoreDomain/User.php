@@ -62,7 +62,10 @@ class User implements JsonSerializable
         return $this->userRole;
     }
 
-    public function jsonSerialize()
+    /**
+     * @return string[]
+     */
+    public function jsonSerialize(): array
     {
         return [
             'name' => $this->getName(),
